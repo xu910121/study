@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+
+sub add {
+	$sum = $_[0] +$_[1];
+	print $sum . "\n";
+}
+
+&add->(2,3);

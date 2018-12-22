@@ -1,0 +1,1 @@
+print r'C:\Program Files\foo\bar' "\\"

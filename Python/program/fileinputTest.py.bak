@@ -1,0 +1,26 @@
+#!/usr/bin/python                                                      
+#coding:utf-8                                                          
+__metaclass__ = type                                                  
+                                                                      
+import fileinput                                                      
+import sys                                                            
+                                                                       
+if len(sys.argv) < 2 :                                                
+    print "没有要处理的文件"                                             
+else:                                                                 
+    for line in fileinput.input():                                       
+        print line                                                         
+                                                                      
+if len(sys.argv) >= 2 :                                               
+    pass                                                                 
+    #print "处理了fileinput.lineno() = %d行" % fileinput.lineno()      
+                                                                       
+#for x in fileinput.input():                                           
+#   print x                                                              
+#   print fileinput.isstdin()                                            
+                                                                       
+for line in fileinput.input(inplace=True,backup='.bak'):               
+    line = line.rstrip()
+    num = fileinput.lineno()                                              
+    line = line.expandtabs(4)
+    print '%-70s # %2i' % (line,num)                                      
