@@ -1,1 +1,9 @@
-**以管理员身份运行cmd**
+1. 以管理员身份运行cmd
+2. 运行diskpart
+3. list disk        
+4. sel disk 1             #选择U盘所在的disk编号，1可能不是U盘所在的disk编号，以实际为准。
+5. clean
+执行clean后，可以在Windows资源管理器中看到U盘，但此时无法格式化，可以下载U盘工具进行格式化。
+
+
+PS：在选择disk后，选择disk上的volume，进行格式化，显示卷的簇太大。暂时不知道怎么解决。。。。。
